@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Professor {
 
-    String firstName;
+    public String firstName;
     String lastName;
     String sex;
     int age;

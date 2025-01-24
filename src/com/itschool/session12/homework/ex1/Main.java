@@ -45,7 +45,7 @@ public class Main {
         List<String> ionutzCourses = new ArrayList<>();
         for (Course course : courses) {
             for (Student student : course.students) {
-                if ("Alex".equals(student.firstName)) {
+                if ("Ionutz".equals(student.firstName)) {
                     ionutzCourses.add(course.name);
                 }
             }
