@@ -12,7 +12,7 @@ public class Main2 {
         List<Window> windows = createWindowsList(seaViewWindow, mountainViewWindow, window3);
 
         House myHouse = createHouse(10, 20, true, windows);
-        myHouse.description = "myHouse desc";
+        //myHouse.description = "myHouse desc";
         House.name = "myHouse name";
         myHouse.checkVars();
 
@@ -29,7 +29,7 @@ public class Main2 {
         House neighbourHouse = createHouse(0, 50, false, null);
         neighbourHouse.checkVars();
 
-        //System.out.println("Neighbour's house is: " + neighbourHouse);
+        System.out.println("Neighbour's house is: " + neighbourHouse);
 
         int result = House.sum(3, 5);
         System.out.println(result);
@@ -45,11 +45,7 @@ public class Main2 {
                                      int lungime,
                                      boolean areToateUtilitatile,
                                      List<Window> ferestre) {
-        House house = new House();
-        house.width = latime;
-        house.length = lungime;
-        house.hasAlUtilities = areToateUtilitatile;
-        house.windows = ferestre;
+        House house = new House(null, lungime, latime, ferestre, areToateUtilitatile);
         House.name = "ceva";
 
         return house;

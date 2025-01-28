@@ -7,50 +7,54 @@ public class Main {
 
     public static void main(String[] args) {
         Student student1 = new Student();
-        student1.firstName = "Ionutz";
-        student1.cnp = 12345L;
+        student1.setFirstName("Ionutz");
+        student1.setCnp(12345L);
+        student1.setSex("M");
 
         Professor mathProfessor = new Professor();
-        mathProfessor.firstName = "Prof de mate";
+        mathProfessor.setFirstName("Prof de mate");
 
         Course math = new Course(); // cursul de mate are un profesor - Prof de mate
         // si un student - Ionutz
-        math.name = "Math";
-        math.professor = mathProfessor;
-        math.students = new ArrayList<>();
-        math.students.add(student1);
+        math.setName("Math");
+        System.out.println(math);
+
+        System.out.println("Course name is: " + math.getName());
+        math.setProfessor(mathProfessor);
+        math.setStudents(new ArrayList<>());
+        math.getStudents().add(student1);
 
         Student student2 = new Student();
-        student2.firstName = "Alex";
-        math.students.add(student2);
+        student2.setFirstName("Alex");
+        math.getStudents().add(student2);
         //
 
         Professor englishProfessor = new Professor();
-        englishProfessor.firstName = "Prof de engleza";
+        englishProfessor.setFirstName("Prof de engleza");
 
         Course english = new Course();
-        english.name = "English";
-        english.professor = englishProfessor;
-        english.students = new ArrayList<>();
-        english.students.add(student1);
+        english.setName("English");
+        english.setProfessor(englishProfessor);
+        english.setStudents(new ArrayList<>());
+        english.getStudents().add(student1);
 
         List<Course> courses = new ArrayList<>();
         courses.add(math);
         courses.add(english);
 
-        /*for (Course course : courses) {
+        for (Course course : courses) {
             System.out.println(course);
-        }*/
+        }
 
         List<String> ionutzCourses = new ArrayList<>();
         for (Course course : courses) {
-            for (Student student : course.students) {
-                if ("Ionutz".equals(student.firstName)) {
-                    ionutzCourses.add(course.name);
+            for (Student student : course.getStudents()) {
+                if ("Ionutz".equals(student.getFirstName())) {
+                    ionutzCourses.add(course.getName());
                 }
             }
         }
 
-        System.out.println(student1.firstName + " has the courses: " + ionutzCourses);
+        System.out.println(student1.getFirstName() + " has the courses: " + ionutzCourses);
     }
 }

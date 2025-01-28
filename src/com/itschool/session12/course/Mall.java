@@ -27,7 +27,7 @@ public class Mall {
         System.out.println("Param1 is: " + param1);
         System.out.println("Age is: " + age);
         System.out.println(professor);
-        System.out.println(professor.firstName);
+        System.out.println(professor.getFirstName());
     }
 
     String myFavouriteItem() {
