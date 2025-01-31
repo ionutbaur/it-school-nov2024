@@ -2,7 +2,7 @@ package com.itschool.session12.homework.ex1;
 
 import java.time.LocalDate;
 
-public class Person {
+public sealed class Person permits Student, Professor {
 
     private String firstName;
     private String lastName;

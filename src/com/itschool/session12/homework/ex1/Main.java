@@ -6,10 +6,17 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        Pupil pupil = new Pupil();
+        pupil.setBook("Some pupil book");
+        pupil.setHasBackpack(true);
+        pupil.setCnp(12345L);
+        System.out.println(pupil);
+
         Student student1 = new Student();
         student1.setFirstName("Ionutz");
         student1.setCnp(12345L);
         student1.setSex("M");
+        student1.setBook("Some book");
 
         Professor mathProfessor = new Professor();
         mathProfessor.setFirstName("Prof de mate");
