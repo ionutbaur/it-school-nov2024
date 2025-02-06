@@ -5,6 +5,10 @@ public class Main {
     public static void main(String[] args) {
         CarManager dieselCarManager = new DieselCarManager();
         dieselCarManager.manage();
+        System.out.println("===============");
+
+        AbstractCarManager abstractCarManager = new ElectricCarManager();
+        abstractCarManager.manage();
 
         System.out.println("=============");
 

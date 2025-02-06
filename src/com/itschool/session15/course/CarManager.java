@@ -6,13 +6,13 @@ public abstract class CarManager {
         System.out.println("Park the car");
     }
 
-    private void washCar() {
+    private final void washCar() {
         System.out.println("Wash the car");
     }
 
     protected abstract void fuelCar();
 
-    public void manage() {
+    public final void manage() {
         parkCar();
         washCar();
         fuelCar();

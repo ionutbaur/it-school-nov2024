@@ -41,7 +41,11 @@ public sealed class Person permits Student, Professor {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age < 0) {
+
+        } else {
+            this.age = age;
+        }
     }
 
     public LocalDate getDateOfBirth() {
