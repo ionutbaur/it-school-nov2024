@@ -1,0 +1,12 @@
+Create account
+userName: ionutz@ceva.ro
+password: bla123
+
+stored password in db: hash("bla123") = "sagfskjdfsjdhfs1234kjdhskjdhfdjh"; => accountPassword
+
+Authenicate:
+userName: ionutz@ceva.ro
+password: bla123
+validate: hash("bla123") = "sagfskjdfsjdhfs1234kjdhskjdhfdjh"; => authPassword
+
+authPassword.equals(accountPassword)
