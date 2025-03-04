@@ -15,7 +15,8 @@ public class Main {
         System.out.println(p1.hashCode());
         System.out.println(p3.hashCode());
 
-        Set<Person> people = new TreeSet<>();
+        Set<Person> people = new TreeSet<>(
+                (pers1, pers2) -> pers2.getName().compareTo(pers1.getName()));
         people.add(p1);
         people.add(p2);
         people.add(p3);

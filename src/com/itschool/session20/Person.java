@@ -2,7 +2,7 @@ package com.itschool.session20;
 
 import java.util.Objects;
 
-public class Person implements Comparable<Person> {
+public class Person /*implements Comparable<Person>*/ {
 
     private final String name;
     private final int age;
@@ -43,8 +43,8 @@ public class Person implements Comparable<Person> {
                 '}';
     }
 
-    @Override
+    /*@Override
     public int compareTo(Person that) {
-        return that.name.compareTo(this.name);
-    }
+        return this.name.compareTo(that.name);
+    }*/
 }
